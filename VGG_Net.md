@@ -23,5 +23,6 @@
 
 본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어진다), parameter수가 급격히 늘어나지 않음을 알 수 있다.
 
+
 > single test scale 모델간의 성능 비교
 <img width="967" alt="vgg_2" src="https://user-images.githubusercontent.com/51469989/74998425-0d1f2e00-549c-11ea-8f53-56d9efae348e.png">
