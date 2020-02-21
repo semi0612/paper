@@ -19,9 +19,15 @@
 ## 실험 내용
 
 #### 실험 모델 사이의 layer 및 파라미터 수 비교
-> 본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어진다), parameter수가 급격히 늘어나지 않음을 알 수 있다.
+> 본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어짐), parameter수가 급격히 늘어나지 않음을 알 수 있다.
 <img width="835" alt="vgg_1" src="https://user-images.githubusercontent.com/51469989/74997722-38a11900-549a-11ea-957e-7f60295ac39f.png">
 
-
-> single test scale 모델간의 성능 비교
+#### single test scale 모델간의 성능 비교
+> 깊이가 깊어질 수록 에러율 감소(단, 19레이어의 경우는 예외)
 <img width="967" alt="vgg_2" src="https://user-images.githubusercontent.com/51469989/74998425-0d1f2e00-549c-11ea-8f53-56d9efae348e.png">
+
+#### multi test scale 모델간의 성능 비교
+> single scale보다 multiple scale 에러율이 더 낮음을 확인할 수 있다.
+<img width="1022" alt="vgg_3" src="https://user-images.githubusercontent.com/51469989/74998432-101a1e80-549c-11ea-92c5-7b8248c50b38.png">   
+
+VGGNet은 224x224 크기의 color image를 input으로 하여 1개 이상의 convolutional layer 뒤에 max-pooling layer 가 오는 단순 구조로 되어 있으며 기존 CNN 구조와 마찬가지로 Fully-connected layer가 온다. sing test scale 모델 성능 비교 결과 A 모델과 A-LRN 모델 사이의 LRN layer의 유무에 따른 모델 성능을 비교한 결과 top-1 val.error와 top-5 val.error의 성능 향상이 없다고 판단하여 B 모델 ~ E 모델은 layer 깊이에 따른 모델 성능의 변화를 비교 하였다. 그 결과 망이 깊어질수록 성능 향상을 있음을 확인 하였고 single test scale을 사용한 model들과 multi-crop과 dense evaluation 을 섞어 사용한 multi test scale을 사용한 model들을 각각 성능을 비교하였다. multi test scale을 사용한 모델들이 조금 더 높은 성능을 보인다.
