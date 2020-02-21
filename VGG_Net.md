@@ -20,7 +20,7 @@
 
 > 실험 모델 사이의 layer 및 파라미터 수 비교
 
-  본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어진다), parameter수가 급격히 늘어나지 않음을 알 수 있다.
+    본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어진다), parameter수가 급격히 늘어나지 않음을 알 수 있다.
 <img width="835" alt="vgg_1" src="https://user-images.githubusercontent.com/51469989/74997722-38a11900-549a-11ea-957e-7f60295ac39f.png">
 
 
