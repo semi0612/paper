@@ -19,19 +19,19 @@
 ## 실험 내용
 
 > 실험 모델 사이의 layer 및 파라미터 수 비교   
-#### 본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어짐), parameter수가 급격히 늘어나지 않음을 알 수 있다.
+본 논문에서 학습시킨 ConvNet들의 설정을 볼 수 있다. 입력 이미지의 경우 ImageNet의 Dataset이기 때문에 모두 동일. 네트워크의 깊이가 깊어짐에도 불구하고(A->E 순서로 깊어짐), parameter수가 급격히 늘어나지 않음을 알 수 있다.
 <img width="835" alt="vgg_1" src="https://user-images.githubusercontent.com/51469989/74997722-38a11900-549a-11ea-957e-7f60295ac39f.png">
 
 > single test scale 모델간의 성능 비교   
-#### 깊이가 깊어질 수록 에러율 감소(단, 19레이어의 경우는 예외)
+깊이가 깊어질 수록 에러율 감소(단, 19레이어의 경우는 예외)
 <img width="967" alt="vgg_2" src="https://user-images.githubusercontent.com/51469989/74998425-0d1f2e00-549c-11ea-8f53-56d9efae348e.png">
 
 > multi test scale 모델간의 성능 비교   
-#### single scale보다 multiple scale 에러율이 더 낮음을 확인할 수 있다.
+single scale보다 multiple scale 에러율이 더 낮음을 확인할 수 있다.
 <img width="1022" alt="vgg_3" src="https://user-images.githubusercontent.com/51469989/74998432-101a1e80-549c-11ea-92c5-7b8248c50b38.png">   
 
 
 ## 결론
-VGG_Net은 기존 CNN 구조와 마찬가지로 마지막에 Fc layer가 오는, 1개 이상의 convolutional layer 뒤에 max-pooling layer 가 오는 단순한 구조로 되어 있다. A 모델과 A-LRN 모델의 차이인 LRN layer의 유무에 따른 모델 성능을 비교한 결과 따로 성능 향상은 없다고 판단. B 모델 ~ E 모델은 layer의 깊이에 따라 모델 성능이 있는가를 비교 하였다. 그 결과 망이 깊어질수록 성능 향상을 있음을 확인 하였고, multi-crop과 dense를 섞어 사용한 multi test scale을 사용한 모델들이 조금 더 높은 성능을 보였다.   
+> VGG_Net은 기존 CNN 구조와 마찬가지로 마지막에 Fc layer가 오는, 1개 이상의 convolutional layer 뒤에 max-pooling layer 가 오는 단순한 구조로 되어 있다. A 모델과 A-LRN 모델의 차이인 LRN layer의 유무에 따른 모델 성능을 비교한 결과 따로 성능 향상은 없다고 판단. B 모델 ~ E 모델은 layer의 깊이에 따라 모델 성능이 있는가를 비교 하였다. 그 결과 망이 깊어질수록 성능 향상을 있음을 확인 하였고, multi-crop과 dense를 섞어 사용한 multi test scale을 사용한 모델들이 조금 더 높은 성능을 보였다.   
 
-기존 Model들 보다 작은 3x3 filter size를 사용하여 최대 19 레이어까지 깊이를 늘려 좋은 성능을 이끌어냈다. 하지만 여전히 paramater 수가 너무 많은데, 이는 과적합등의 문제를 발생 시킬 수 있다는 의미이기도 하다.
+> 기존 Model들 보다 작은 3x3 filter size를 사용하여 최대 19 레이어까지 깊이를 늘려 좋은 성능을 이끌어냈다. 하지만 여전히 paramater 수가 너무 많은데, 이는 과적합등의 문제를 발생 시킬 수 있다는 의미이기도 하다.
