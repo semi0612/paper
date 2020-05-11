@@ -1,6 +1,6 @@
 # Paper
 
-### -Paper (model, attention etc...)
+### -Paper (Reading_and_summary)
 1. VggNet
 2. ResNet
 3. DenseNet
