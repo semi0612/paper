@@ -2,8 +2,8 @@
 
 ### -Paper (Reading_and_summary)
 1. VggNet
-2. ResNet
-3. DenseNet
+2. DenseNet
+3. ResNet
 4. EfficientNet
 5. Going deeper with convolutions
 6. U-Net
