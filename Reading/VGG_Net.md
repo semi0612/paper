@@ -137,7 +137,7 @@ ILSVRC-2014 분류 과제로 7개 모델의 앙상블을 사용하여 7.3%의 �
 
 
 
-## summary
+### summary
  1. ILSVRC 2014 대회에서 GoogleNet에 근소한 차이로 아쉽게 2등을 차지한 Network
  2. VGG Net 논문은 망의 깊이가 딥러닝 결과에 어떤 영향을 미치는 지 알아보기 위하여 연구
  3. 3x3 filter size 사용
