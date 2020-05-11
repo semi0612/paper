@@ -1,7 +1,6 @@
 # Paper
--------------------------
 
-###-papaer summary (model, attention etc...)
+### -papaer summary (model, attention etc...)
 1. VggNet
 2. ResNet
 3. DenseNet
@@ -19,4 +18,4 @@
 
 
 
-###-model code
+### -model code
