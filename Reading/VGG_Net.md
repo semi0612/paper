@@ -138,9 +138,9 @@ ILSVRC-2014 분류 과제로 7개 모델의 앙상블을 사용하여 7.3%의 �
 
 
 ## summary
-> 1. ILSVRC 2014 대회에서 GoogleNet에 근소한 차이로 아쉽게 2등을 차지한 Network
-> 2. VGG Net 논문은 망의 깊이가 딥러닝 결과에 어떤 영향을 미치는 지 알아보기 위하여 연구
-> 3. 3x3 filter size 사용
-> 4. 이전의 depth는 8layers 수준에서 머물렀다면 GoogleNet, VGGnet 이후 크게 깊어짐
-> 5. 깊은 네트워크를 가지고 있지만, GoogLeNet과 비교하면, 구조가 매우 간단하다는 장점
-> 6. 매우 많은 파라미터를 이용하여 연산한다는 단점
+ 1. ILSVRC 2014 대회에서 GoogleNet에 근소한 차이로 아쉽게 2등을 차지한 Network
+ 2. VGG Net 논문은 망의 깊이가 딥러닝 결과에 어떤 영향을 미치는 지 알아보기 위하여 연구
+ 3. 3x3 filter size 사용
+ 4. 이전의 depth는 8layers 수준에서 머물렀다면 GoogleNet, VGGnet 이후 크게 깊어짐
+ 5. 깊은 네트워크를 가지고 있지만, GoogLeNet과 비교하면, 구조가 매우 간단하다는 장점
+ 6. 매우 많은 파라미터를 이용하여 연산한다는 단점
