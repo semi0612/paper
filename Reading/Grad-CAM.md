@@ -69,7 +69,7 @@ Grad-CAM은 원래의 카테고리를 정확하게 localization 할 수 있다.
 두 번째 행 역시 얼굴과 헤어스타일을 보고 예측(의사를 간호사로 잘못 분류)한 반면, 편향되지 않은 모델은 하얀 코트와 청진기를 보면서 올바른 예측을 했다.
 
 
-#### 7.
+#### 7. Textual Explanations with Grad-CAM
 GradCAM으로 텍스트 설명을 얻을 수있는 방법을 제공 
 
 ![캡처](https://user-images.githubusercontent.com/51469989/82657694-bd016480-9c60-11ea-812f-240f264c9e0e.JPG)
@@ -78,9 +78,9 @@ GradCAM으로 텍스트 설명을 얻을 수있는 방법을 제공
 텍스트 설명을 위해 예측된 클래스에서 가장 중요한 뉴런을 이름과 함께 제공하는데, 이는 잘못 집중하고 있는 부분을 확인할 수 있게끔한다.
 처음 두 행은 성공 사례를 마지막 두행은 실패한 사례를 각각 보여주고 있다.
 
-#### 8.
+#### 8. Grad-CAM for Image Captioning and VQA
 Grad-CAM을 비전 및 언어 모델 (이미지 캡션 및 시각적 질문 응답 (VQA))에 적용하는 방법을 보여준다.
-
+결과적으로 Grad-CAM을 이미지 captioning 및 VQA와 같은 언어작업에 적용. 이는 눈에 띄게 변하지 않는 기존의 시각화와 비교된다. 
 
 #### 정리
 (GAP (Global average pooling) : feature map 전체에서 pooling
