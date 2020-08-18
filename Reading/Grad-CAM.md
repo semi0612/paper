@@ -5,9 +5,8 @@
 ### summary
 ```
 * (GAP (Global average pooling) : feature map 전체에서 pooling
-* Grad-CAM과 CAM은 'CNN모델'이 'GAP 레이어'를 사용한다는 가정하에 동일한 동작.
-* CAM은 GAP가 있어야만 사용이 가능하고, GAP는 채널에 대한 평균이기에 CNN에서만 사용 가능
-
+* Grad-CAM과 CAM은 'CNN모델'이 'GAP 레이어'를 사용한다는 가정하에 동일한 동작이다
+* CAM은 GAP가 있어야만 사용이 가능하고, GAP는 채널에 대한 평균이기에 CNN에서만 사용 가능하다
 ```
 -------------------
 
