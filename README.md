@@ -15,7 +15,3 @@
 12. Assemble_CNN
 13. YOLO(You Only Look Once)
 14. Visualizing Data using t-SNE
-
-
-
-### -model code
