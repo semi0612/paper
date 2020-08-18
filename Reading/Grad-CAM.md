@@ -82,7 +82,6 @@ GradCAM으로 텍스트 설명을 얻을 수있는 방법을 제공
 Grad-CAM을 비전 및 언어 모델 (이미지 캡션 및 시각적 질문 응답 (VQA))에 적용하는 방법을 보여준다.
 결과적으로 Grad-CAM을 이미지 captioning 및 VQA와 같은 언어작업에 적용. 이는 눈에 띄게 변하지 않는 기존의 시각화와 비교된다. 
 
--
-(GAP (Global average pooling) : feature map 전체에서 pooling
-Grad-CAM과 CAM은 'CNN모델'이 'GAP 레이어'를 사용한다는 가정하에 동일한 동작.
-CAM은 GAP가 있어야만 사용이 가능하고, GAP는 채널에 대한 평균이기에 CNN에서만 사용 가능
+- (GAP (Global average pooling) : feature map 전체에서 pooling
+- Grad-CAM과 CAM은 'CNN모델'이 'GAP 레이어'를 사용한다는 가정하에 동일한 동작.
+- CAM은 GAP가 있어야만 사용이 가능하고, GAP는 채널에 대한 평균이기에 CNN에서만 사용 가능
