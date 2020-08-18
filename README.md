@@ -1,4 +1,4 @@
-## paper review(mode, etc...)
+## paper review
 
 * [VggNet](https://github.com/semi0612/CNN_paper/blob/master/Reading/VggNet.md)
 * [DenseNet](https://github.com/semi0612/CNN_paper/blob/master/Reading/DenseNet.md)
