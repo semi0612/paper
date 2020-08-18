@@ -1,5 +1,10 @@
 ## Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization
 
+논문 링크 : https://arxiv.org/pdf/1610.02391.pdf
+
+-------------------
+
+
 ### ABSTRACT
 CNN의 많은 클래스로부터 결정을 위한 '시각적 설명'을 제작하면서, 보다 투명하고 알기 쉬운 기법으로 
 이전 접근 방식과는 달리 Grad-CAM은 다양한 CNN Model에서 활용할 수 있는 장점이 있음
