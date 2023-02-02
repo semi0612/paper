@@ -42,7 +42,11 @@ YOLO의 장점 3가지.
 
 detection을 regression 문제로 재구성하여 복잡한 파이프라인이 필요하지 않게 됨.
 
-Titan X GPU에서 배치 없이 45fps(frame per second), 빠른 버전 150fps보다 빠름. - real time으로 적용할 수 있다는 것을 의미, 다른 real time 시스템에 비해 두 배가 넘는 mAP를 달성함.
+Titan X GPU에서 배치 없이 45fps(frame per second), 빠른 버전 150fps보다 빠름. - real time으로 적용할 수 있다는 것을 의미, 다른 real time 시스템에 비해 두 배가 넘는 mAP¹를 달성함.
+<br>
+
+<sub> ※ ¹ mAP : 모든 점 보간법을 이용해서 AP를 구한 값의 평균. 여러 Class에 대한 AP를 구해야 하므로, 각각의 Class에 대해 AP를 구하고 평균을 산출한다. <br>
+AP(Average Precision) : 단어 그대로 평균 정밀도이며 CNN을 평가할 때 사용하는 지표이다. AP곡선은 Precision(정확도; 검출 결과 중 옳게 검출한 비율)와 Recall(재현율)을 고려한 종합적 평가 지표이며, 0~1 사이의 모든 Recall에 대응하는 평균 Precision이라고 생각할 수 있다.</sub>
 
 2. 이미지에 대해 전체적으로 추론함.
 
@@ -222,8 +226,29 @@ Fast YOLO는 가장 빠르고 YOLO는 Fast YOLO보다 mAP가 더 높게 기록�
 
 Fast R-CNN은 localization 오류는 작지만 배경 오류 비중은 큼.
 
+#### Combining Fast R-CNN and YOLO
+YOLO는 Fast R-CNN보다 배경 오류를 훨씬 적게 일으킨다. 따라서 R-CNN과 Fast R-CNN을 사용하기 전 배경제거를 위해 YOLO를 사용한다면 성능을 크게 향상 시킬 수 있다.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/51469989/216210093-7ce5232c-4c04-4707-baf4-25ae144284eb.png" width="50%"></p>
+
+Fast R-NN과 Combined 했을 때 좋은 결과를 보여준다.
+
+#### Generalizability : Person Detection in Artwork
+현실 세계에서 가능한 모든 사례를 예측하기는 어렵지만, 예술 작품에서의 사람 감지 테스트를 위해 Picasso Dataset과 People-Art Dataset을 사용해 다른 객체 탐지 모델과 YOLO를 비교해봄.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/51469989/216212223-054ba629-e2be-4be1-88d4-1ec4b98bf532.png" width="50%"></p>
+
+R-CNN은 VOC 2007에서는 높은 AP를 보여줬지만 위와 같이 예술 작품에 적용했을 때는 값이 떨어지는 모습을 모였다. 반대로 YOLO의 경우에는 VOC 2007에서도 우수한 성능을 보였고, 예술작품에 적용했을 때도 AP의 성능이 떨어지지 않았다.
+
+이는 객체의 크기와 모양 뿐 아니라 객체 간의 관계와 객체가 일반적으로 나타내는 위치를 모델링 하기 때문이다. 예술작품과 실제 이미지는 픽셀 수준에서는 다를 수 있지만 물체의 크기와 모양 면에서는 유사한 모습을 보이기 때문에 YOLO는 여전히 좋은 bounding boxes와 detections을 가지고 있는 것이다.
+
 ### Real-Time Detection In The Wild
-Web cam에 연결하여 YOLO의 real-time 성능을 측정함.
+YOLO는 빠르고 정확한 물체 탐지가 가능하기 때문에 컴퓨터 비전 어플리케이션에 이상적이다. Web cam에 연결하여 YOLO의 real-time 성능을 측정하였고, 추적시스템처럼 작동하여 물체가 이동하고 모양이 변경될 때마다 물체를 감지해냈다.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/51469989/216213046-7e9e6b6d-f95e-4115-aff8-18289554a11f.png" width="50%"></p>
+
+하늘을 나는 사람 하나를 비행기라고 예측하긴 했지만, 대부분 정확하게 예측된 모습
+
 
 ### Conclusion
 기존의 분류기 접근방식과 다르게 YOLO는 탐지 성능에 직접 대응하는 비용 함수에 바로 학습하고, 전체 모델을 공동으로 훈련함.
