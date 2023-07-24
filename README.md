@@ -11,6 +11,7 @@
 * [FPN (Feature Pyramid Networks for Object Detection)](https://github.com/semi0612/CNN_paper/blob/master/Reading/FPN.md)
 * [Grad_CAM: Visual Explanations from Deep Networks via Gradient-based Localization](https://github.com/semi0612/CNN_paper/blob/master/Reading/Grad_CAM.md)
 * [YOLO (You Only Look Once: Unified, Real-Time Object Detection)](https://github.com/semi0612/CNN_paper/blob/master/Reading/YOLO.md)
+* [Llama 2: Open Foundation and Fine-Tuned Chat Models](https://github.com/semi0612/paper/blob/master/Reading/Llama2.md)
 * ~~[CAM](https://github.com/semi0612/CNN_paper/blob/master/Reading/**%20CAM.md)~~
 * ~~[Wide Residual Networks](https://github.com/semi0612/CNN_paper/blob/master/Reading/***%20Wideresnet.md)~~
 * ~~[CBAM (Convolutional Block Attention Module)]~~()
