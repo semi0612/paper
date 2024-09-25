@@ -1,3 +1,6 @@
+* screenAgent, cogAgent, Mind2Web, android in the wild, Auto UI, Llama, self-instruction
+* Dynamically Expandable Network(DEN), EWC(Elastic weight consolidation)Permalink
+
 ## paper review
 
 * [VggNet (Very Deep Convolutional Networks For Large-Scale Image Recognition)](https://github.com/semi0612/CNN_paper/blob/master/Reading/VggNet.md)
